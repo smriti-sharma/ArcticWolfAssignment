@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: Server
+  description: Server RESTfull APIs Spec
+  contact:
+    name: smriti-assignment
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:8080
+paths:
+  /server/:
+    description: call the server to output file in directory
+    post:
+      description: call the server to create file in output dir
+      operationId: callServer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServerInp'
+      responses:
+        '200':
+          description: Successful operation
+components:
+  schemas:
+    ServerInp:
+      type: object
+      properties:
+        fileName:
+          type: string
+        filteredItems:
+          type: object
+          additionalProperties:
+            type: string

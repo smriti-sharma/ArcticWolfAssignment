@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: Server
+  description: Server RESTfull APIs Spec
+  contact:
+    name: smriti-assignment
+  version: 1.0.0
+servers:
+  - url: https://devapi.com
+  - url: https://prodapi.com
+paths:
+  /server:
+    description: call the server to output file in directory
+    post:
+      description: call the server to create file in output dir
+      operationId: callServer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filename:
+                  type: string
+                filteredData:
+                  type: object
+                  additionalProperties:
+                    type: string
+
+      responses:
+        '200':
+          description: Successful operation

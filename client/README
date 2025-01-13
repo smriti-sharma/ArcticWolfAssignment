@@ -1,0 +1,19 @@
+This is the README of Client
+Client program takes monitors the input directory for any new created/added filename.
+It filteres the data from the file based on regex patterns given and created filetered data map.
+it then hit Server POST API "callServer" anf give filename and filtered data map to it.
+Client program then deletes the file from input directory.
+
+Config file given in args argument contains following -
+input directory path, this is the directory program monitors for any new file
+regex patters
+
+In the CLI command we pass config file as argument.
+--config /Users/smritisharma/Workspace/ArcticWolfAssignment/client.conf
+
+To run the program you will need following
+1. Maven installed
+2. JDK installed
+
+Then run command "mvn clean install" to build the project.
+Run the project, this will run the client to monitor the directory.

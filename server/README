@@ -1,0 +1,15 @@
+This is the README of Server
+Server program takes filetered map and the filename in input of callServer method.
+It creates a file of given filename with the values from filtered map.
+It crates the file in the output directory path, given in config file.
+
+In the CLI command we pass config file as argument.
+--config /Users/smritisharma/Workspace/ArcticWolfAssignment/server.conf
+server.conf file contains the port number which server listens on and the output directory path to create the file.
+
+To run the program you will need following
+1. Maven installed
+2. JDK installed
+
+Then run command "mvn clean install" to build the project.
+Run the project, this will run the server to listen to clients.
