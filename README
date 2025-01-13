@@ -6,6 +6,8 @@ Assignment has following :
 3. serve config file
 4. client config file
 
+NOTE => Make sure to update the path in config files before running the program.
+
 Config files needs to be passed in the CLI command as args in their respective projects.
 Client hit the server's POST API when a new file is added in input directory.
 This API takes filename and filtered data map.
